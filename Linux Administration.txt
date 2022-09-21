@@ -1,0 +1,34 @@
+Task : 1
+Linux Timezones Setting
+
+	connecting appservers from jump server
+	using ssh
+	-ssh username@svrname(or)svrip
+	-enter passwrd
+	change the timezone using timedatectl command
+	-sudo timedatectl set-timezone America/---
+
+Task : 2	
+Create a Linux User with non-interactive shell
+
+	using useradd cmd
+	-sudo useradd john -s /sbin/nologin
+	
+
+Task : 3	
+Linux File Permissions
+
+	want to execute shell scripts
+	it's default permission is 000
+	
+	$ sudo chmod 555 xfusioncorp.sh
+
+Task : 4	
+Linux User Files
+	 find all files (not directories) owned by user
+	and copy them all while keeping the folder structure (preserve the directories path) 
+	
+	#ll /home/userdata
+	#ll /destination directory
+	#find /home/userdata/ -type f -user username | wc -l
+	# find /home/usersdata/ -type f -user username -exec cp --parents {} /destination directory \;
